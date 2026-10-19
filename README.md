@@ -106,6 +106,7 @@ QuickFind/
 ├─ Ui.cs                   暗色控件与绘制
 ├─ NativeMethods.cs        全局热键、窗口圆角等 Win32 调用
 ├─ app.manifest            长路径与权限声明
+├─ docs/github-actions/    CI / Release 工作流模板
 └─ assets/                 图标、预览图、生成脚本
 ```
 
