@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>QuickFind</AssemblyName>
+    <RootNamespace>QuickFind</RootNamespace>
+    <ApplicationIcon>assets\app.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Version>1.0.0</Version>
+    <Authors>QuickFind</Authors>
+    <Product>闪查 QuickFind</Product>
+    <Description>本机文件极速定位工具</Description>
+
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>false</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <PublishTrimmed>false</PublishTrimmed>
+    <DebugType>none</DebugType>
+    <NoWarn>$(NoWarn);MSB3277</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="assets\app.ico" LogicalName="QuickFind.assets.app.ico" />
+    <EmbeddedResource Include="$(PkgMicrosoft_Web_WebView2)\runtimes\win-x64\native\WebView2Loader.dll"
+                      LogicalName="QuickFind.Native.WebView2Loader.dll"
+                      Condition="Exists('$(PkgMicrosoft_Web_WebView2)\runtimes\win-x64\native\WebView2Loader.dll')" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3485.44" GeneratePathProperty="true" />
+  </ItemGroup>
+
+  <Target Name="RemoveWebView2ExtrasFromPublish" AfterTargets="ComputeResolvedFilesToPublishList">
+    <ItemGroup>
+      <ResolvedFileToPublish Remove="@(ResolvedFileToPublish)"
+                             Condition="'%(ResolvedFileToPublish.Filename)' == 'WebView2Loader'" />
+      <ResolvedFileToPublish Remove="@(ResolvedFileToPublish)"
+                             Condition="'%(ResolvedFileToPublish.Extension)' == '.xml' and
+                                        ('%(ResolvedFileToPublish.Filename)' == 'Microsoft.Web.WebView2.Core' or
+                                         '%(ResolvedFileToPublish.Filename)' == 'Microsoft.Web.WebView2.WinForms' or
+                                         '%(ResolvedFileToPublish.Filename)' == 'Microsoft.Web.WebView2.Wpf')" />
+    </ItemGroup>
+  </Target>
+</Project>
