@@ -11,9 +11,16 @@
     <ApplicationIcon>assets\app.ico</ApplicationIcon>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <Version>1.0.0</Version>
-    <Authors>QuickFind</Authors>
+    <Authors>Jianmo-R and QuickFind contributors</Authors>
+    <Company>Jianmo-R and QuickFind contributors</Company>
     <Product>闪查 QuickFind</Product>
-    <Description>本机文件极速定位工具</Description>
+    <Description>Windows 本机文件极速定位，支持文件名精确匹配与网页版 DeepSeek 相关词扩展。</Description>
+    <Copyright>Copyright (c) 2026 Jianmo-R and QuickFind contributors</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/Jianmo-R/QuickFind</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/Jianmo-R/QuickFind</PackageProjectUrl>
+    <PackageTags>windows;winforms;file-search;deepseek;webview2;productivity</PackageTags>
 
     <SelfContained>true</SelfContained>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
