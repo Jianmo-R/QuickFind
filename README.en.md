@@ -1,6 +1,5 @@
 # QuickFind
 
-[![Build](https://github.com/Jianmo-R/QuickFind/actions/workflows/build.yml/badge.svg)](https://github.com/Jianmo-R/QuickFind/actions/workflows/build.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 A lightweight file locator for Windows. Type a file name and jump to its location instantly. An optional **AI related** tab asks the DeepSeek web chat to expand the query into related keywords, then searches local file names/paths — kept strictly separate from exact file-name matches.

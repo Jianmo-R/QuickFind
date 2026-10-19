@@ -15,7 +15,7 @@
 - 系统托盘、单实例唤醒、结果右键菜单、资源管理器定位、复制路径。
 - 暗色 WinForms 界面，支持高 DPI。
 - 单文件 Windows x64 发布，内置 .NET 运行时；WebView2Loader 嵌入 exe 并按需释放。
-- GitHub Actions 构建与 Release 工作流。
+- GitHub Actions 构建/Release 工作流模板（见 `docs/github-actions/`，需 `workflow` scope 启用）。
 
 ### Known limitations
 

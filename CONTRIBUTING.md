@@ -39,6 +39,7 @@ dotnet publish .\QuickFind.csproj -c Release -r win-x64 --self-contained true `
 - 关联相关 Issue（例如 `Fixes #12`）。
 - 新增功能请同步更新 `README.md` 和 `CHANGELOG.md`。
 - 不要修改 `LICENSE` 的版权人；新增文件默认沿用 MIT 许可证。
+- 仓库维护者如需启用 CI，可把 `docs/github-actions/` 下的工作流复制到 `.github/workflows/`（需要带 `workflow` scope 的推送权限）。
 
 ## 安全问题
 

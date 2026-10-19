@@ -1,6 +1,5 @@
 # 闪查 QuickFind
 
-[![Build](https://github.com/Jianmo-R/QuickFind/actions/workflows/build.yml/badge.svg)](https://github.com/Jianmo-R/QuickFind/actions/workflows/build.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-0078D4.svg)](#系统要求)
 
@@ -82,6 +81,8 @@ dotnet publish .\QuickFind.csproj -c Release -r win-x64 --self-contained true `
 输出：`dist\QuickFind.exe`。
 
 > `WebView2Loader.dll` 已作为资源嵌入 exe，首次使用 AI 时释放到可写数据目录，因此发布目录只需要这一个 exe。
+
+仓库还提供 GitHub Actions 构建/Release 模板，位于 [`docs/github-actions/`](docs/github-actions/)；复制到 `.github/workflows/` 即可启用。
 
 ## 数据与隐私
 
